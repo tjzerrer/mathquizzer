@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Dodge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-shell">
+    <header class="hud">
+      <div class="hud-item">Score: <span id="score">0</span></div>
+      <div class="hud-item">Best: <span id="best-score">0</span></div>
+      <div class="hud-item">Shield: <span id="shield-status">No</span></div>
+      <div class="hud-item">Slow Time: <span id="slow-status">Ready</span></div>
+    </header>
+
+    <div class="canvas-wrap">
+      <canvas id="game-canvas" aria-label="Neon Dodge game"></canvas>
+
+      <div id="start-screen" class="overlay active">
+        <h1>Neon Dodge</h1>
+        <p>Dodge falling hazards. Grab power-ups. Survive as long as possible.</p>
+        <ul>
+          <li>Move: Arrow keys or WASD</li>
+          <li>Pause: P or Esc</li>
+          <li>Mobile: drag anywhere or use joystick</li>
+        </ul>
+        <button id="play-btn">Play</button>
+      </div>
+
+      <div id="pause-screen" class="overlay">
+        <h2>Paused</h2>
+        <p>Press P or Esc to continue.</p>
+      </div>
+
+      <div id="game-over-screen" class="overlay">
+        <h2>Game Over</h2>
+        <p>Final score: <span id="final-score">0</span></p>
+        <button id="play-again-btn">Play Again</button>
+      </div>
+
+      <div class="mobile-controls" id="mobile-controls" aria-hidden="true">
+        <div id="joystick-base" class="joystick-base">
+          <div id="joystick-knob" class="joystick-knob"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
